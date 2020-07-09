@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contact V2</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+    <div class="picture" style="background-image: url('img/a.jpg');" v-if="first === 1">
+        <div class="textt">
+            <h4 id="well">WELCOME TO</h4>
+            
+            <div style="background-image: url('img/w.png');" id="logo"><h1 id="E">E</h1></div>
+            
+            <h2 id="ext">ExtraSheet</h2>
+            <a href="#2"><button @click.prevent="next()" id="cont" ><h4>FIND<span> OUT</span> MORE..</h4></button></a>
+        </div>
+    </div>
+    <!--=======================-->
+    <div id="2" class="page2" style="background-image: url('img/a.jpg');" v-if="first === 2">
+        <div class="texttt">
+            <div style="background-image: url('img/w.png');" id="logo"><h1 id="E">E</h1></div>
+            
+            <h2 id="ext">ExtraSheet</h2>
+            <a href="#dark"><button @click.prevent="next()" id="contr"><h4>CREATE ACCOUNT</h4></button></a>
+            <a href="#log"><button @click.prevent="sign()" id="contr"><h4>SIGN IN</h4></button></a>
+            <h4 id="cond">By Signing Up You're Agreeing To Our Terms And Conditions</h4>
+            
+            
+        </div>
+        
+        
+    </div>
+    
+    <section id="dark" v-if="first === 3">
+        <h1>Let's Create Your Account</h1>
+        <h3>Extrasheet is a learning-oriented platform that connects you to
+            people through our social network</h3>
+        <div id="darkk">
+            <form action="#page2">
+                <label for="First Name">First Name</label>
+                <input type="text" placeholder="First name" required="required">
+                <label for="Last Name">Last Name</label>
+                <input type="text" placeholder="Last name" required="required">
+                <label for="Username">Username</label>
+                <input type="text" placeholder="username" required="required">
+                <label for="DOB">DOB</label>
+                <input type="datetime" placeholder="date of birth" required="required">
+                <label for="email">email</label>
+                <input type="email" placeholder="Email address" required="required">
+                <label for="Mobile Number">Mobile Number</label>
+                <input type="number" placeholder="Mobile number" required="required">
+                <label for="Password">Password</label>
+                <input type="password" placeholder="password" required="required">
+                <label for="password">Repeat Password</label>
+                <input type="password" placeholder="Repeat password" required="required">
+                <button @click.prevent="next()" type="submit"> CREATE ACCOUNT</button>
+                
+            </form>
+        </div>
+    </section>
+    <section v-if="first === 6" id="log">
+        <h1 id="sign">Sign-In</h1>
+        <h3 id="it">Connect with people that are interested in what you do and want to learn it</h3>
+        <form>
+            <label id="logl" for="Email/Username">Email or Username</label>
+                <input id="logi" type="email/text" placeholder="Email or Username" required="required">
+                <label id="logl" for="Password">Password</label>
+                <input id="logi" type="password" placeholder="password" required="required">
+                <button id="logb" type="submit"> SIGN IN</button>
+                
+            
+        </form>
+        <div id="inf">
+        
+    </div
+    </section>
+    
+  </div>  
+    
+    <script src="js/vue.min.js"></script>
+    <script src="js/style.js"></script>
+<!--===============================================================================================-->
+</body>
+</html>
